@@ -1,6 +1,6 @@
 // CONSTANTS ============================================================
 
-const API_URL = `http://localhost:1337`
+const API_URL = `https://speedcubing-backend.herokuapp.com`
 
 // Navbar ============================================================
 $(function(){
@@ -34,7 +34,7 @@ document.getElementById("register_form").onsubmit = e => {
 
 function submitFunction() {
   $.ajax({
-    url: "http://localhost:1337/emails",
+    url: API_URL + "/emails",
     data: JSON.stringify({ email: document.getElementById("address").value }),
     dataType: "json",
     contentType: "application/json",
@@ -45,7 +45,7 @@ function submitFunction() {
       btn.disabled = true;
 
       document.getElementById("address").disabled = true;
-      elem.addEventListener("keypress", enterfunction);
+      // elem.addEventListener("keypress", enterfunction);
     }
   });
 }
@@ -65,7 +65,7 @@ document.getElementById("contact_form").onsubmit = e => {
 
 function submitContact() {
   $.ajax({
-    url: "http://localhost:1337/contacts",
+    url: API_URL + "/contacts",
     data: JSON.stringify({ email: document.getElementById("addresscont").value, name: document.getElementById("namecont").value, message: document.getElementById("messagecont").value }),
     dataType: "json",
     contentType: "application/json",
