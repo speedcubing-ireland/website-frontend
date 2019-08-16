@@ -1,6 +1,6 @@
 // CONSTANTS ============================================================
 
-const API_URL = `https://speedcubing-backend.herokuapp.com`
+const API_URL = `http://localhost:1337`
 
 // Navbar ============================================================
 $(function(){
