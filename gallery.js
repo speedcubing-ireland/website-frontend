@@ -3,7 +3,7 @@ fetch(API_URL + '/images')
   .then(images => {
     const gallery = document.getElementById('gallery')
 
-    images.forEach(img => {
+    images.reverse().forEach(img => {
       const image = createImage(API_URL + img.image.url, img.description)
       gallery.appendChild(image)
     })
