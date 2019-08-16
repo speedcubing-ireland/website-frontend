@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Speedcubing Ireland</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <style>
+
+      .is-horizontal-center {
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+      }
+      .extrapadded {
+        margin: 60px
+      }
+      .home-hero {
+        background: linear-gradient(
+            rgba(41, 109, 219, 0.4),
+            rgba(41, 109, 219, 0.7)
+          ),
+          /* url('http://aacfla.org/assets/img/aacf-retreat.jpg') */
+          url('https://www.cubingusa.org/static/img/group-photo-2015.jpg')
+
+          center
+          center;
+        background-size: cover;
+      }
+      .card {
+        text-align:center;
+        border-radius: 10px 10px 10px 10px;
+        padding: 10px;
+        margin-bottom: 15px;
+        background: white;
+        box-shadow: 0px 0px 0px grey;
+        -webkit-transition:  box-shadow 0.5s ease-out;
+        box-shadow: .8px .9px 3px #DBDBDB;
+        cursor: pointer;
+
+      }
+      .card:hover{
+         box-shadow: 1px 8px 20px #3273DC;
+        -webkit-transition:  box-shadow .3s
+      }
+
+    .time {
+      text-align: center
+    }
+    .is-smooth {
+      border-radius:2%;
+      }
+    </style>
+
+  </head>
+  <body class="has-navbar-fixed-top">
+    <!-- Navbar -->
+    <nav class="navbar is-light is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="index.html" class="navbar-item">
+          <span class="has-text-weight-bold">  SpeedCubing </span>Ireland
+          </a>
+          <div class="navbar-burger burger" data-target="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+          </div>
+        </div>
+        <div id="navMenu" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="index.html" class="navbar-item is-active">Home</a>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a href="upcoming.html" class="navbar-link">
+                Competitions
+              </a>
+              <div class="navbar-dropdown">
+                <a href="upcoming.html" class="navbar-item">
+                  Upcoming
+                </a>
+                <a onclick="reload();" target="_blank" href="https://www.worldcubeassociation.org/competitions?utf8=%E2%9C%93&region=Ireland&search=&year=all+years&state=past&from_date=&to_date=&delegate=&display=list" class="navbar-item">
+                  Past
+                </a>
+                <a onclick="reload();" target="_blank" href="https://www.youtube.com/watch?v=dPL3eV-A0ww" class="navbar-item">
+                  Compeditor Tutorial
+                </a>
+              </div>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a href="live.html" class="navbar-link">
+                Results
+              </a>
+              <div class="navbar-dropdown">
+                <a href="live.html" class="navbar-item">
+                  Live
+                </a>
+                <a onclick="reload();" target="_blank" href="https://www.worldcubeassociation.org/results/regions.php?regionId=Ireland&eventId=&years=&slim=Slim" class="navbar-item">
+                  WCA
+                </a>
+              </div>
+            </div>
+            <a href="gallery.html" class="navbar-item">Gallery</a>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Info
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  About Us
+                </a>
+                <a class="navbar-item" onclick="modalContact()">
+                  Contact
+                </a>
+                <a class="navbar-item">
+                  Links
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-end">
+            <div class="buttons">
+              <a target="_blank" href="https://www.facebook.com/groups/825531714235298/" class="button is-link is-rounded"><i class="fab fa-facebook-f"></i></a>
+              <a class="button is-link is-rounded is-inverted" onclick="modalSignup()"><p class="has-text-weight-bold ">Sign Up</p></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Signup Popup -->
+    <div class="modal" id="signupModal">
+      <div class="modal-background" onclick="closeFunction()"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title"><strong>Sign Up To The Mailing List</strong></p>
+          <button class="delete" aria-label="close" onClick="closeFunction()"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="columns">
+
+            <div class="column is-1">
+            </div>
+            <div class="column">
+              <div class="boxy">
+                <p>To Hear About Competitions Events And Announcements <br> <strong>Sign Up To The Mailing List!</strong></p>
+                <br>
+                <div class="field">
+                  <label class="label">Email</label>
+                  <div class="control has-icons-left">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                  <form id="register_form">
+                    <input class="input is-link" required type="email" name="address" placeholder="Email" id="address">
+                    <hr>
+                    <button type="submit" id="submit-btn" class="button is-success" value="submit_now" id="submitBtn">Submit</button>
+                  </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column is-1">
+            </div>
+          </div>
+        </section>
+      </div>
+      </div>
+    <!-- Contact Popup -->
+    <div class="modal" id="contactModal">
+      <div class="modal-background" onclick="closeContact()"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title"><strong>Contact Us</strong></p>
+          <button class="delete" aria-label="close" onClick="closeContact()"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="columns">
+
+            <div class="column is-1">
+            </div>
+            <div class="column">
+              <div class="boxy">
+                <p>To Send a Message or Query to The Speedcubing Ireland Team <br> <strong>Fill In This Form!</strong></p>
+                <br>
+                <div class="field">
+
+                  <form id="contact_form">
+                    <label class="label">Name</label>
+                    <div class="control has-icons-left">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-signature"></i>
+                      </span>
+                    <input class="input" required type="text" name="address" placeholder="Name" id="namecont">
+                    <br>
+                    <br>
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                      </span>
+                    <input class="input" required type="email" name="address" placeholder="Email" id="addresscont">
+
+                    <br>
+                    <br>
+                    <label class="label">Message</label>
+                    <div class="control has-icons-left">
+                    <textarea class="textarea" required type="text" name="address" placeholder="Write Your Message Here" id="messagecont"></textarea>
+
+                    <hr>
+                    <button type="submit" id="contact-btn" class="button is-success" value="submit_now" id="submitBtn">Submit</button>
+                  </form>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+            <div class="column is-1">
+            </div>
+          </div>
+        </section>
+      </div>
+      </div>
+    <!-- Gallery Modal -->
+    <div class="modal" id="galleryModal">
+      <div class="modal-background" onclick="closeGallery()"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title has-text-bold" id="titlebar"></p>
+          <button class="delete" aria-label="close" onClick="closeGallery()"></button>
+        </header>
+        <section class="modal-card-body" id="modalImage"></section>
+      </div>
+    </div>
+    <!-- Hero Bar -->
+    <section class="hero home-hero is-link is-fullheight-with-navbar">
+      <div class="hero-body">
+        <div class="container">
+          <br>
+          <br><br>
+          <figure class="">
+            <img class="is-horizontal-center" width="256px" height="256px" src="assets/logo.png">
+          </figure>
+          <h1 class="title has-text-weight-light is-size-1 has-text-centered">
+            <strong class="has-text-weight-bold">SpeedCubing</strong> <br>Ireland
+          </h1>
+        </div>
+      </div>
+      <!-- Foot Level -->
+      <div class="hero-foot">
+        <div class="gap extrapadded">
+          <nav class="level ">
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">View Live Results</p>
+                <a href="live.html" class=""><p class="title">Live</p></a>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Learn To Cube</p>
+                <a href="learn.html" class=" "><p class="title">Learn</p></a>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">See Upcoming Competitions</p>
+                <a href="upcoming.html" class=""><p class="title">Competitions</p></a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- Columns Images And Posts -->
+    <div class="is-fluid section">
+      <div class="columns">
+        <div class="column is-9">
+          <div class="sectionname">
+            <p class="has-text-centered has-text-weight-bold is-size-4">Recent Posts</p>
+            <hr>
+          </div>
+          <div id="articles-container">
+          </div>
+          <div class="has-text-centered">
+            <br>
+            <a href="posts.html" class="button is-link is-outlined is-rounded">See All</a>
+          </div>
+        </div>
+        <div id="gallery" class="column is-3 is-hidden-mobile">
+          <!-- Countdown -->
+          <div class="count container notification is-grey">
+            <div id="time" class="time">
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Speedcubing Ireland</strong> by <a href="https://www.worldcubeassociation.org/persons/2017KELL08">Simon Kelly</a>.
+          <br>
+        </p>
+      </div>
+    </footer>
+    <!-- Script Links -->
+    <div class="scripts">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="snarkdown.js"></script>
+      <script src="main.js"></script>
+      <script src="index.js"></script>
+    </div>
+  </body>
+</html>
