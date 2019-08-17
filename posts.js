@@ -1,6 +1,4 @@
-
-
-// ARTICLE CODE =====================================================
+// ARTICLE CODE ======================================================
 
 
 const articleContainer = document.getElementById('articles-container')
@@ -14,7 +12,7 @@ fetch(API_URL + '/articles')
         title: post.title,
         author: post.author,
         date: post.updated_at,
-        content: snarkdown(post.content),
+        contents: snarkdown(post.content),
         tagName: post.type
       })
 
@@ -22,7 +20,7 @@ fetch(API_URL + '/articles')
     })
   })
 
-function createArticle({ title, author, date, content, tagName }) {
+function createArticle({ title, author, date, contents, tagName }) {
   const article = document.createElement('article')
   article.className = 'message is-link'
 
@@ -51,7 +49,7 @@ function createArticle({ title, author, date, content, tagName }) {
   article.appendChild(header)
 
   const articleText = document.createElement('div')
-  articleText.className = 'message-body'
+  articleText.className = 'message-body content'
 
   const announcement = document.createElement('em')
   const strong = document.createElement('strong')
@@ -75,59 +73,8 @@ function createArticle({ title, author, date, content, tagName }) {
   articleText.appendChild(announcement)
   articleText.appendChild(document.createElement('br'))
   // articleText.appendChild(document.createTextNode(summary))
-  articleText.innerHTML += content
+  articleText.innerHTML += contents
   article.appendChild(articleText)
 
   return article
-}
-
-
-// IMAGES CODE ========================================================
-
-function shuffle(arr) {
-  let i = arr.length
-
-  while (0 !== i) {
-    const randomIdx = Math.floor(Math.random() * i);
-    i -= 1;
-
-    const temp = arr[i];
-    arr[i] = arr[randomIdx];
-    arr[randomIdx] = temp;
-  }
-
-  return arr
-}
-
-
-const NUM_IMAGES = 4
-
-fetch(API_URL + '/images')
-  .then(res => res.json())
-  .then(images => {
-    const shuffled = shuffle(images).slice(0, NUM_IMAGES)
-    const gallery = document.getElementById('gallery')
-
-    shuffled.forEach(img => {
-      const image = createImage(API_URL + img.image.url)
-      gallery.appendChild(image)
-    })
-  })
-
-function createImage(src) {
-  const box = document.createElement('div')
-  box.className = 'box'
-
-  const figure = document.createElement('figure')
-  figure.className = 'image'
-
-  const image = document.createElement('img')
-  image.src = src
-  image.className = 'is-smooth'
-
-  figure.appendChild(image)
-  box.appendChild(figure)
-
-
-  return box
 }

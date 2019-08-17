@@ -59,7 +59,7 @@ fetch(API_URL + '/articles')
         title: post.title,
         author: post.author,
         date: post.updated_at,
-        content: snarkdown(post.content),
+        contents: snarkdown(post.content),
         tagName: post.type
       })
 
@@ -67,7 +67,7 @@ fetch(API_URL + '/articles')
     })
   })
 
-function createArticle({ title, author, date, content, tagName }) {
+function createArticle({ title, author, date, contents, tagName }) {
   const article = document.createElement('article')
   article.className = 'message is-link'
 
@@ -96,7 +96,7 @@ function createArticle({ title, author, date, content, tagName }) {
   article.appendChild(header)
 
   const articleText = document.createElement('div')
-  articleText.className = 'message-body'
+  articleText.className = 'message-body content'
 
   const announcement = document.createElement('em')
   const strong = document.createElement('strong')
@@ -120,7 +120,7 @@ function createArticle({ title, author, date, content, tagName }) {
   articleText.appendChild(announcement)
   articleText.appendChild(document.createElement('br'))
   // articleText.appendChild(document.createTextNode(summary))
-  articleText.innerHTML += content
+  articleText.innerHTML += contents
   article.appendChild(articleText)
 
   return article
