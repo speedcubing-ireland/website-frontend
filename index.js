@@ -154,7 +154,7 @@ fetch(API_URL + '/images')
     const gallery = document.getElementById('gallery')
 
     shuffled.forEach(img => {
-      const image = createImage(API_URL + img.image.url, img.description)
+      const image = createImage(IMG_URL + img.image.url, img.description)
       console.log(img);
       gallery.appendChild(image)
     })
