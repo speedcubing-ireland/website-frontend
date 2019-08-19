@@ -129,80 +129,80 @@ function createArticle({ title, author, date, contents, tagName }) {
 
 // IMAGES CODE ========================================================
 
-// function shuffle(arr) {
-//   let i = arr.length
+function shuffle(arr) {
+  let i = arr.length
 
-//   while (0 !== i) {
-//     const randomIdx = Math.floor(Math.random() * i);
-//     i -= 1;
+  while (0 !== i) {
+    const randomIdx = Math.floor(Math.random() * i);
+    i -= 1;
 
-//     const temp = arr[i];
-//     arr[i] = arr[randomIdx];
-//     arr[randomIdx] = temp;
-//   }
+    const temp = arr[i];
+    arr[i] = arr[randomIdx];
+    arr[randomIdx] = temp;
+  }
 
-//   return arr
-// }
-
-
-// const NUM_IMAGES = 4
-
-// fetch(API_URL + '/images')
-//   .then(res => res.json())
-//   .then(images => {
-//     const shuffled = shuffle(images).slice(0, NUM_IMAGES)
-//     const gallery = document.getElementById('gallery')
-
-//     shuffled.forEach(img => {
-//       const image = createImage(API_URL + img.image.url, img.description)
-//       // console.log(img);
-//       gallery.appendChild(image)
-//     })
-//   })
-
-// function createImage(src, desc) {
-//   const box = document.createElement('div')
-//   box.className = 'box card'
-//   box.onclick = function() {
-//          modalGallery(src, desc);
-//      };
-
-//   const figure = document.createElement('figure')
-//   figure.className = 'image'
-
-//   const p = document.createElement('p')
-//   p.className = 'has-text-centered has-text-weight-normal'
-//   p.innerText = desc
-
-//   const image = document.createElement('img')
-//   image.src = src
-//   image.className = 'is-smooth'
-
-//   figure.appendChild(image)
-//   box.appendChild(figure)
-//   box.appendChild(p)
+  return arr
+}
 
 
-//   return box
-// }
+const NUM_IMAGES = 4
 
-// function modalGallery(src, desc) {
-//   document.getElementById("galleryModal").className += " is-active";
-//   document.getElementById('titlebar').innerHTML = "";
-//   document.getElementById('titlebar').innerHTML = desc;
-//   document.getElementById('modalImage').innerHTML = "";
-//   const modal = document.getElementById('modalImage')
-//   const figure = document.createElement('figure')
-//   figure.className = 'image'
+fetch(API_URL + '/images')
+  .then(res => res.json())
+  .then(images => {
+    const shuffled = shuffle(images).slice(0, NUM_IMAGES)
+    const gallery = document.getElementById('gallery')
 
-//   const image = document.createElement('img')
-//   image.src = src
-//   image.class = 'photo modal-image'
-//   figure.appendChild(image)
-//   modal.appendChild(figure)
+    shuffled.forEach(img => {
+      const image = createImage(API_URL + img.image.url, img.description)
+      // console.log(img);
+      gallery.appendChild(image)
+    })
+  })
 
-// }
+function createImage(src, desc) {
+  const box = document.createElement('div')
+  box.className = 'box card'
+  box.onclick = function() {
+         modalGallery(src, desc);
+     };
 
-// function closeGallery() {
-//   document.getElementById("galleryModal").className += "modal";
-// }
+  const figure = document.createElement('figure')
+  figure.className = 'image'
+
+  const p = document.createElement('p')
+  p.className = 'has-text-centered has-text-weight-normal'
+  p.innerText = desc
+
+  const image = document.createElement('img')
+  image.src = src
+  image.className = 'is-smooth'
+
+  figure.appendChild(image)
+  box.appendChild(figure)
+  box.appendChild(p)
+
+
+  return box
+}
+
+function modalGallery(src, desc) {
+  document.getElementById("galleryModal").className += " is-active";
+  document.getElementById('titlebar').innerHTML = "";
+  document.getElementById('titlebar').innerHTML = desc;
+  document.getElementById('modalImage').innerHTML = "";
+  const modal = document.getElementById('modalImage')
+  const figure = document.createElement('figure')
+  figure.className = 'image'
+
+  const image = document.createElement('img')
+  image.src = src
+  image.class = 'photo modal-image'
+  figure.appendChild(image)
+  modal.appendChild(figure)
+
+}
+
+function closeGallery() {
+  document.getElementById("galleryModal").className += "modal";
+}
