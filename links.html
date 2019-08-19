@@ -3,30 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SCI | Live</title>
+    <title>Speedcubing Ireland | Links</title>
+    <link rel="shortcut icon" type="image/png" href="/assets/logo.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <style>
-      .padded{
-        padding-right: 10px;
-        padding-left: 10px;
-      }
-      .tableDiv{
-        overflow-x: auto;
-      }
-      .tableSection{
-        width: 100%;
-      }
-      .hidden {
-        display: none;
-      }
-      .table.is-scrollable tbody {
-        overflow-y: scroll;
-        width: auto;
-        position: absolute;
-      }
 
+    <style>
+      
     </style>
+
   </head>
   <body class="has-navbar-fixed-top">
     <!-- Navbar -->
@@ -62,11 +47,11 @@
               </div>
             </div>
             <div class="navbar-item has-dropdown is-hoverable">
-              <a href="live.html" class="navbar-link is-active">
+              <a href="live.html" class="navbar-link">
                 Results
               </a>
               <div class="navbar-dropdown"> 
-                <a href="live.html" class="navbar-item is-active">
+                <a href="live.html" class="navbar-item">
                   Live
                 </a>
                 <a onclick="reload();" target="_blank" href="https://www.worldcubeassociation.org/results/regions.php?regionId=Ireland&eventId=&years=&slim=Slim" class="navbar-item">
@@ -79,7 +64,7 @@
             </div>
             <a href="gallery.html" class="navbar-item">Gallery</a>
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
+              <a class="navbar-link  is-active">
                 Info
               </a>
               <div class="navbar-dropdown">
@@ -89,7 +74,7 @@
                 <a class="navbar-item" onclick="modalContact()">
                   Contact
                 </a>
-                <a href="links.html" class="navbar-item">
+                <a href="links.html" class="navbar-item is-active">
                   Links
                 </a>
               </div>
@@ -199,28 +184,6 @@
         </section>
       </div>
       </div>
-    <!-- Title Bar -->
-    <section class="hero is-link">
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            <p class="title is-size-1">Live Results</p>
-            <p class="heading is-size-4" id="comp-name"></p>
-         </div>
-        </div>
-      </section>
-    <!-- Round Picker -->
-    <div class="box">
-      <p id="infoTitle" class="has-text-weight-bold has-text-centered is-size-4">Please Select A Round</p>
-      <br>
-        <div id="resultsContainer" class="tabs is-centered is-toggle is-toggle-rounded">
-
-        </div>
-      <hr>
-      <div class="table-container">
-        <div id="resultsTable" class="tableDiv">
-        </div>
-      </div>
-    </div>
     <!-- Footer -->
     <footer class="footer">
       <div class="content has-text-centered">
@@ -236,7 +199,6 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="snarkdown.js"></script>
       <script src="main.js"></script>
-      <script src="liveresults.js"></script>
     </div>
   </body>
 </html>

@@ -66,7 +66,9 @@
     <nav class="navbar is-light is-fixed-top" role="navigation" aria-label="main navigation">
       <div class="container">
         <div class="navbar-brand">
-          <a href="index.html" class="navbar-item"><span class="has-text-weight-bold">SpeedCubing </span>Ireland</a>
+          <a href="index.html" class="navbar-item">
+          <span class="has-text-weight-bold">  SpeedCubing </span>Ireland
+          </a>
           <div class="navbar-burger burger" data-target="navMenu">
           <span></span>
           <span></span>
@@ -75,33 +77,36 @@
         </div>
         <div id="navMenu" class="navbar-menu">
           <div class="navbar-start">
-            <a href="index.html" class="navbar-item is-active">Home</a>
+            <a href="index.html" class="navbar-item">Home</a>
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
+              <a href="upcoming.html" class="navbar-link">
                 Competitions
               </a>
               <div class="navbar-dropdown">
-                <a href="upcoming.html" class="navbar-item">
+                <a href="upcoming.html" class="navbar-item is-active">
                   Upcoming
                 </a>
-                <a target="_blank" href="https://www.worldcubeassociation.org/competitions?utf8=%E2%9C%93&region=Ireland&search=&year=all+years&state=past&from_date=&to_date=&delegate=&display=list" class="navbar-item">
+                <a onclick="reload();" target="_blank" href="https://www.worldcubeassociation.org/competitions?utf8=%E2%9C%93&region=Ireland&search=&year=all+years&state=past&from_date=&to_date=&delegate=&display=list" class="navbar-item">
                   Past
                 </a>
-                <a target="_blank" href="https://www.youtube.com/watch?v=dPL3eV-A0ww" class="navbar-item">
+                <a onclick="reload();" target="_blank" href="https://www.youtube.com/watch?v=dPL3eV-A0ww" class="navbar-item">
                   Compeditor Tutorial
                 </a>
               </div>
             </div>
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
+              <a href="live.html" class="navbar-link">
                 Results
               </a>
-              <div class="navbar-dropdown">
+              <div class="navbar-dropdown"> 
                 <a href="live.html" class="navbar-item">
                   Live
                 </a>
-                <a target="_blank" href="https://www.worldcubeassociation.org/results/regions.php?regionId=Ireland&eventId=&years=&slim=Slim" class="navbar-item">
+                <a onclick="reload();" target="_blank" href="https://www.worldcubeassociation.org/results/regions.php?regionId=Ireland&eventId=&years=&slim=Slim" class="navbar-item">
                   WCA
+                </a>
+                <a onclick="reload();" target="_blank" href="https://wcadb.net/?region=Ireland&gender=female" class="navbar-item">
+                  Female Records
                 </a>
               </div>
             </div>
@@ -111,13 +116,13 @@
                 Info
               </a>
               <div class="navbar-dropdown">
-                <a class="navbar-item">
+                <a href="about.html" class="navbar-item">
                   About Us
                 </a>
                 <a class="navbar-item" onclick="modalContact()">
                   Contact
                 </a>
-                <a class="navbar-item">
+                <a href="links.html" class="navbar-item">
                   Links
                 </a>
               </div>
@@ -133,8 +138,8 @@
         </div>
       </div>
     </nav>
-    <!-- Signup Popup -->
-    <div class="modal" id="signupModal">
+  <!-- Signup Popup -->
+  <div class="modal" id="signupModal">
       <div class="modal-background" onclick="closeFunction()"></div>
       <div class="modal-card">
         <header class="modal-card-head">
@@ -247,8 +252,9 @@
     <footer class="footer">
       <div class="content has-text-centered">
         <p>
-          <strong>Speedcubing Ireland</strong> by <a href="https://www.worldcubeassociation.org/persons/2017KELL08">Simon Kelly</a>.
+          <strong>Speedcubing Ireland</strong> by <a href="https://www.worldcubeassociation.org/persons/2017KELL08">Simon Kelly</a>. 
           <br>
+          <a href="https://github.com/simonkellly"><i class="fab fa-github"></i></a>
         </p>
       </div>
     </footer>
