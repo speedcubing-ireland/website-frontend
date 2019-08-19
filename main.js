@@ -1,6 +1,6 @@
 // CONSTANTS ============================================================
 
-const API_URL = `/api`
+const API_URL = `https://cors-anywhere.herokuapp.com/http://speedcubingireland.epizy.com`
 
 // Navbar ============================================================
 $(function(){

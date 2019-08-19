@@ -50,7 +50,7 @@
 
 const articleContainer = document.getElementById('articles-container')
 
-fetch(API_URL + '/api/collections/get/article?token=0dde2cab50c7d9950345295597343d', {mode: "no-cors"})
+fetch(API_URL + '/api/collections/get/article')
   .then(res => res.json())
   .then(posts => {
     console.log(posts)
