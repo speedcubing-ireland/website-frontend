@@ -11,7 +11,7 @@ fetch(API_URL + '/competitions')
         end: comp.enddate,
         link: comp.wcalink,
         tag: comp.registrationopen,
-        image: comp.image.url
+        image: comp.photo
       })
       timeContainer.appendChild(competition)
     })
