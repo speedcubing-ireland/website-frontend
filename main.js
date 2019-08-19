@@ -1,6 +1,6 @@
 // CONSTANTS ============================================================
 
-const API_URL = `http://speedcubingireland.epizy.com`
+const API_URL = `https://speedcubing-backend.herokuapp.com`
 
 // Navbar ============================================================
 $(function(){

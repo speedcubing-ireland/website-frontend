@@ -58,7 +58,7 @@ fetch(API_URL + '/api/collections/get/article?token=0dde2cab50c7d995034529559734
       const article = createArticle({
         title: post.entries.title,
         author: post.entries.author,
-        date: post.entries._modified,
+        date: post.entries.updates_at,
         contents: snarkdown(post.entries.content),
         tagName: post.entries.type
       })
