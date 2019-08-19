@@ -56,11 +56,11 @@ fetch(API_URL + '/articles',)
     console.log(posts)
     posts.reverse().slice(0,5).forEach(post => {
       const article = createArticle({
-        title: post.entries.title,
-        author: post.entries.author,
-        date: post.entries.updates_at,
-        contents: snarkdown(post.entries.content),
-        tagName: post.entries.type
+        title: post.title,
+        author: post.author,
+        date: post.updates_at,
+        contents: snarkdown(post.content),
+        tagName: post.type
       })
 
       articleContainer.appendChild(article)
