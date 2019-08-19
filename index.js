@@ -58,7 +58,7 @@ fetch(API_URL + '/articles',)
       const article = createArticle({
         title: post.title,
         author: post.author,
-        date: post.updates_at,
+        date: post.updated_at,
         contents: snarkdown(post.content),
         tagName: post.type
       })
