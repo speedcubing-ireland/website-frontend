@@ -13,7 +13,7 @@ fetch(API_URL + '/competitions')
         end: comp.enddate,
         link: comp.wcalink,
         tag: comp.registrationopen,
-        image: comp.image.url
+        image: comp.photo
       })
 
       compContainer.appendChild(competition)
@@ -70,8 +70,8 @@ function createCompetition({ title, start, end, link, tag, image }) {
 
   const img = document.createElement('img')
   img.className = 'imgsquare'
-  img.setAttribute('src', API_URL + image)
-  console.log(API_URL + image);
+  img.setAttribute('src', image)
+  console.log(image);
 
 
   figure.appendChild(img)
