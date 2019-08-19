@@ -1,56 +1,56 @@
-// const timeContainer = document.getElementById('time')
-// fetch(API_URL + '/competitions')
-//   .then(res => res.json())
-//   .then(comps => {
-//     console.log(comps)
-//     comps.slice(0,1
-//     ).forEach(comp => {
-//       const competition = createCount({
-//         title: comp.title,
-//         start: comp.startdate,
-//         end: comp.enddate,
-//         link: comp.wcalink,
-//         tag: comp.registrationopen,
-//         image: comp.image.url
-//       })
-//       timeContainer.appendChild(competition)
-//     })
-//   })
-//   function createCount({ start, title }) {
-//   const daysObj = new Date(start)
-//   const currentObj = new Date();
-//   const one_day=1000*60*60*24;
+const timeContainer = document.getElementById('time')
+fetch(API_URL + '/competitions')
+  .then(res => res.json())
+  .then(comps => {
+    console.log(comps)
+    comps.slice(0,1
+    ).forEach(comp => {
+      const competition = createCount({
+        title: comp.title,
+        start: comp.startdate,
+        end: comp.enddate,
+        link: comp.wcalink,
+        tag: comp.registrationopen,
+        image: comp.image.url
+      })
+      timeContainer.appendChild(competition)
+    })
+  })
+  function createCount({ start, title }) {
+  const daysObj = new Date(start)
+  const currentObj = new Date();
+  const one_day=1000*60*60*24;
 
 
 
-//   const competition = document.createElement('p')
-//   competition.className = "is-size-6"
-//   competition.innerText = "Days Until "
+  const competition = document.createElement('p')
+  competition.className = "is-size-6"
+  competition.innerText = "Days Until "
 
-//   const br = document.createElement('br')
-//   const brtwo = document.createElement('br')
+  const br = document.createElement('br')
+  const brtwo = document.createElement('br')
 
-//   const days = document.createElement('p')
-//   days.className = "has-text-weight-bold is-size-1"
-//   days.innerText = Math.ceil((daysObj.getTime()-currentObj.getTime())/(one_day))
+  const days = document.createElement('p')
+  days.className = "has-text-weight-bold is-size-1"
+  days.innerText = Math.ceil((daysObj.getTime()-currentObj.getTime())/(one_day))
 
 
-//   const comptitle = document.createElement('strong')
-//   comptitle.innerText = title
+  const comptitle = document.createElement('strong')
+  comptitle.innerText = title
 
-//   competition.appendChild(br)
-//   competition.appendChild(comptitle)
+  competition.appendChild(br)
+  competition.appendChild(comptitle)
 
-//   competition.appendChild(days)
-//   return competition
-//   }
+  competition.appendChild(days)
+  return competition
+  }
 
 // ARTICLE CODE ======================================================
 
 
 const articleContainer = document.getElementById('articles-container')
 
-fetch(API_URL + '/api/collections/get/article')
+fetch(API_URL + '/api/collections/get/article?token=0dde2cab50c7d9950345295597343d',)
   .then(res => res.json())
   .then(posts => {
     console.log(posts)
