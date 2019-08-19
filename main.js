@@ -1,7 +1,7 @@
 // CONSTANTS ============================================================
 
-const API_URL = `https://speedcubing-backend.herokuapp.com`
-const IMG_URL = `https://raw.githubusercontent.com/speedcubing-ireland/website-backend/master/public`
+const API_URL = `http://localhost:1338`
+
 
 
 // Navbar ============================================================
