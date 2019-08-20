@@ -14,24 +14,27 @@
       }
       .is-horizontal-center {
         display: block;
-    margin-left: auto;
-    margin-right: auto;
-
+      margin-left: auto;
+      margin-right: auto;
       }
       .extrapadded {
-        margin: 60px
+        margin-bottom: 60px;
+
       }
       .home-hero {
         background: linear-gradient(
-            rgba(41, 109, 219, 0.4),
-            rgba(41, 109, 219, 0.7)
+            rgba(41, 109, 219, 0.6),
+            rgba(41, 109, 219, 0.9)
           ),
           /* url('http://aacfla.org/assets/img/aacf-retreat.jpg') */
-          url('https://www.cubingusa.org/static/img/group-photo-2015.jpg')
-
+          /* url('https://www.cubingusa.org/static/img/group-photo-2015.jpg') */
+          url('https://speedcubingireland.com/assets/hero.png')
           center
           center;
         background-size: cover;
+      }
+      .justify-center {
+        justify-content: center;
       }
       .card {
         text-align:center;
@@ -256,29 +259,23 @@
         </div>
       </div>
       <!-- Foot Level -->
-      <div class="hero-foot">
-        <div class="gap extrapadded">
-          <nav class="level ">
-            <div class="level-item has-text-centered">
-              <div>
-                <p class="heading">View Live Results</p>
-                <a href="live.html" class=""><p class="title">Live</p></a>
-              </div>
-            </div>
-            <div class="level-item has-text-centered">
-              <div>
-                <p class="heading">Learn To Cube</p>
-                <a href="learn.html" class=" "><p class="title">Learn</p></a>
-              </div>
-            </div>
-            <div class="level-item has-text-centered">
-              <div>
-                <p class="heading">See Upcoming Competitions</p>
-                <a href="upcoming.html" class=""><p class="title">Competitions</p></a>
-              </div>
-            </div>
-          </nav>
-        </div>
+      <div class="hero-foot justify-center extrapadded">
+                <div class="columns">
+                  <div class="column has-text-centered">
+                      <p class="heading">View Live Results</p>
+                      <a href="live.html" class=""><p class="title">Live</p></a>
+                  </div>
+                  <div class="column has-text-centered">
+                      <p class="heading">Learn To Cube</p>
+                      <a href="learn.html" class=" "><p class="title">Learn</p></a>
+                  </div>
+                  <div class="column has-text-centered">
+                      <p class="heading">See Upcoming Competitions</p>
+                      <a href="upcoming.html" class=""><p class="title">Competitions</p></a>
+                  </div>
+                </div>
+
+
       </div>
     </section>
     <!-- Columns Images And Posts -->
@@ -325,3 +322,28 @@
     </div>
   </body>
 </html>
+
+
+
+
+
+<!-- <nav class="level is-flex">
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">View Live Results</p>
+        <a href="live.html" class=""><p class="title">Live</p></a>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Learn To Cube</p>
+        <a href="learn.html" class=" "><p class="title">Learn</p></a>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">See Upcoming Competitions</p>
+        <a href="upcoming.html" class=""><p class="title">Competitions</p></a>
+      </div>
+    </div>
+  </nav> -->
