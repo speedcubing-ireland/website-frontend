@@ -54,7 +54,7 @@ fetch(API_URL + '/articles',)
   .then(res => res.json())
   .then(posts => {
     console.log(posts)
-    posts.reverse().slice(0,5).forEach(post => {
+    posts.reverse().slice(0,4).forEach(post => {
       const article = createArticle({
         title: post.title,
         author: post.author,
