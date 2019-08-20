@@ -38,11 +38,13 @@ function createImage(src, desc) {
   p.className = 'has-text-centered has-text-weight-bold gallery-im-caption'
   p.innerText = desc
 
+  const hr = document.createElement('hr')
 
 
   figure.appendChild(image)
   cardimage.appendChild(figure)
   card.appendChild(cardimage)
+  card.appendChild(hr)
   card.appendChild(p)
   column.appendChild(card)
 
