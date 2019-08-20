@@ -83,7 +83,7 @@ function createArticle({ title, author, date, contents, tagName }) {
   if (tagName === 'announcement') {
     tagType = 'danger'
   } else if (tagName === 'news') {
-    tagType = 'primary'
+    tagType = 'white'
   } else {
     tagType = 'success'
   }
