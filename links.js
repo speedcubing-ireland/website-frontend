@@ -9,7 +9,7 @@ fetch(API_URL + '/links')
     console.log(posts)
     posts.reverse().forEach(post => {
       const article = createArticle({
-        contents: snarkdown(post.about)
+        contents: snarkdown(post.post)
       })
 
       articleContainer.appendChild(article)
