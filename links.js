@@ -18,7 +18,7 @@ fetch(API_URL + '/links')
 
 function createArticle({ contents }) {
   const article = document.createElement('div')
-  article.className = ''
+  article.className = 'content notification extra-padding'
 
   article.innerHTML += contents
   
