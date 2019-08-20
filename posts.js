@@ -38,7 +38,7 @@ function createArticle({ title, author, date, contents, tagName }) {
   } else if (tagName === 'news') {
     tagType = 'primary'
   } else {
-    tagType = 'warning'
+    tagType = 'success'
   }
   tag.className = `tag is-${tagType}`
   tag.innerText = tagName

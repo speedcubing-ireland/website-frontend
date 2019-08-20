@@ -54,7 +54,7 @@ fetch(API_URL + '/articles',)
   .then(res => res.json())
   .then(posts => {
     console.log(posts)
-    posts.reverse().slice(0,5).forEach(post => {
+    posts.reverse().slice(0,4).forEach(post => {
       const article = createArticle({
         title: post.title,
         author: post.author,
@@ -83,9 +83,9 @@ function createArticle({ title, author, date, contents, tagName }) {
   if (tagName === 'announcement') {
     tagType = 'danger'
   } else if (tagName === 'news') {
-    tagType = 'primary'
+    tagType = 'white'
   } else {
-    tagType = 'warning'
+    tagType = 'success'
   }
   tag.className = `tag is-${tagType}`
   tag.innerText = tagName
