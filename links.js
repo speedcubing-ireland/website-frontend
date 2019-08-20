@@ -7,7 +7,7 @@ fetch(API_URL + '/links')
   .then(res => res.json())
   .then(posts => {
     console.log(posts)
-    posts.reverse().forEach(post => {
+    posts.forEach(post => {
       const article = createArticle({
         contents: snarkdown(post.post)
       })
