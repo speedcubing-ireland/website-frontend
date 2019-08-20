@@ -2,12 +2,29 @@ fetch(API_URL + '/images')
   .then(res => res.json())
   .then(images => {
     const gallery = document.getElementById('gallery')
-
-    images.reverse().forEach(img => {
+    images.reverse().slice(0,12).forEach(img => {
       const image = createImage(img.photo, img.description)
       gallery.appendChild(image)
     })
-  })
+})
+
+var startpage = 0
+var finishpage = 12
+
+document.getElementById("seeMore").onclick = addMore;
+function addMore(){
+  fetch(API_URL + '/images')
+  .then(res => res.json())
+  .then(images => {
+    const gallery = document.getElementById('gallery')
+    startpage = startpage + 12
+    finishpage = finishpage + 12
+    images.reverse().slice(startpage,finishpage).forEach(img => {
+      const image = createImage(img.photo, img.description)
+      gallery.appendChild(image)
+    })
+})
+}
 
 function createImage(src, desc) {
 
