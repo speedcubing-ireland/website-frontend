@@ -1,5 +1,5 @@
 // Change this for each competition
-var compName = "WCA World Championship 2019"
+var compName = "Cubing in Cill Chainnigh 2019"
 const compCode = '4000'
 // ===================================================================
 
@@ -33,6 +33,7 @@ fetch(`https://m.cubecomps.com/competitions/${compCode}/events.json`)
       ul.appendChild(li)
       buttonContainer.appendChild(ul)
       console.log(round.id);
+      document.getElementById('infoTitle').innerHTML = 'Please Select A Round';
     })
   })
 
@@ -42,7 +43,7 @@ function roundSelection(e) {
     const roundId = e.currentTarget.getAttribute('data-round-id')
     const roundName = e.currentTarget.getAttribute('data-round-name')
     // Create the table base
-    document.getElementById('infoTitle').innerHTML = 'Loading...';
+    document.getElementById('infoTitle').innerHTML = '<i class="fas fa-circle-notch fa-spin icon is-large"></i>';
     const tableContainer = document.createElement('table')
     tableContainer.className = 'table is-striped is-hoverable is-narrow is-fullwidth sticky-header'
     tableContainer.innerHTML = `<thead>

@@ -31,8 +31,8 @@ latest competition.
       3Wf - 3x3 With Feet
       Fmc - Fewest Moves
 */
-var compName = "WCA World Championship 2019"
-const compCode = '4000'
+var compName = "Cubing in Cill Chainnigh 2019"
+const compCode = '4619'
 
 const events = {
   '2x2': true,
@@ -47,11 +47,11 @@ const events = {
   'Sq1': true,
   'Mgmx': true,
   '3Bld': true,
-  '4Bld': true,
-  '5Bld': true,
+  '4Bld': false,
+  '5Bld': false,
   'MBld': true,
   '3Oh': true,
-  '3Wf': true,
+  '3Wf': false,
   'Fmc': true
 }
 
