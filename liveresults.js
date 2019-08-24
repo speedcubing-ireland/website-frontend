@@ -43,7 +43,7 @@ function roundSelection(e) {
     const roundId = e.currentTarget.getAttribute('data-round-id')
     const roundName = e.currentTarget.getAttribute('data-round-name')
     // Create the table base
-    document.getElementById('infoTitle').innerHTML = '<i class="fas fa-circle-notch fa-spin icon is-large"></i>';
+    document.getElementById('infoTitle').innerHTML = '<i class="fas fa-circle-notch fa-spin icon is-large has-text-link"></i>';
     const tableContainer = document.createElement('table')
     tableContainer.className = 'table is-striped is-hoverable is-narrow is-fullwidth sticky-header'
     tableContainer.innerHTML = `<thead>
