@@ -69,13 +69,14 @@ fetch(API_URL + '/articles',)
 
 function createArticle({ title, author, date, contents, tagName }) {
   const article = document.createElement('article')
-  article.className = 'message is-link'
+  article.className = 'message'
 
   const header = document.createElement('div')
   header.className = 'message-header'
 
   const titleElem = document.createElement('p')
   titleElem.innerText = title
+  titleElem.className = 'has-text-black'
 
   const tag = document.createElement('span')
 
@@ -83,7 +84,7 @@ function createArticle({ title, author, date, contents, tagName }) {
   if (tagName === 'announcement') {
     tagType = 'danger'
   } else if (tagName === 'news') {
-    tagType = 'white'
+    tagType = 'link'
   } else {
     tagType = 'success'
   }
@@ -94,6 +95,7 @@ function createArticle({ title, author, date, contents, tagName }) {
   header.appendChild(titleElem)
   header.appendChild(tag)
   article.appendChild(header)
+
 
   const articleText = document.createElement('div')
   articleText.className = 'message-body content'

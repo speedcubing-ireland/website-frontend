@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Speedcubing Ireland | Posts</title>
     <link rel="shortcut icon" type="image/png" href="https://quizzical-swanson-8fea7e.netlify.com/assets/altlogo.png"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link href="bulma.css" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
     <style>
@@ -35,85 +35,75 @@
       border-radius:2%;
       }
     </style>
+    <style>
+        .type {
+            margin-top: 10px;
+            margin-left: 15px;
+            margin-bottom: 7px;
+           }
+          .extra-padding {
+            margin: 40px
+          }
+          .extra-padding-nav {
+            margin-left: 15px;
+            margin-top: 8px;
+            margin-bottom: 5px;
+          }
+          .buttons {
+            margin-left: 10px
+          }
+          .menu-padded {
+            margin-right: 15px;
+          }
+          .postpad {
+            margin-left: 10px;
+            margin-right: 10px;
+          }</style>
 
   </head>
   <body class="has-navbar-fixed-top">
     <!-- Navbar -->
-    <nav class="navbar is-light is-fixed-top" role="navigation" aria-label="main navigation">
-      <div class="container">
-        <div class="navbar-brand">
-          <a href="index.html" class="navbar-item">
-          <span class="has-text-weight-bold">SpeedCubing </span>Ireland
-          </a>
-          <div class="navbar-burger burger" data-target="navMenu">
-          <span></span>
-          <span></span>
-          <span></span>
+    <nav aria-label="main navigation" class="navbar is-light is-fixed-top" role="navigation">
+        <div class="navbar-start">
+          <div class="navbar-brand extra-padding-nav">
+            <a class="" href="index.html">
+            <p class="is-size-1 has-text-black"></p>
+            <figure class="">
+              <img class="is-horizontal-center" height="20px" src="assets/newlogo.png" width="175px">
+            </figure>
+            <p></p></a>
+            <div class="navbar-burger burger" data-target="navMenu">
+              <span></span> <span></span> <span></span>
+            </div>
           </div>
         </div>
-        <div id="navMenu" class="navbar-menu">
-          <div class="navbar-start">
-            <a href="index.html" class="navbar-item is-active">Home</a>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a href="upcoming.html" class="navbar-link">
-                Competitions
-              </a>
-              <div class="navbar-dropdown">
-                <a href="upcoming.html" class="navbar-item">
-                  Upcoming
-                </a>
-                <a onclick="reload();" target="_blank" href="https://www.worldcubeassociation.org/competitions?utf8=%E2%9C%93&region=Ireland&search=&year=all+years&state=past&from_date=&to_date=&delegate=&display=list" class="navbar-item">
-                  Past
-                </a>
-                <a onclick="reload();" target="_blank" href="https://www.youtube.com/watch?v=dPL3eV-A0ww" class="navbar-item">
-                  Compeditor Tutorial
-                </a>
-              </div>
-            </div>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a href="live.html" class="navbar-link">
-                Results
-              </a>
-              <div class="navbar-dropdown"> 
-                <a href="live.html" class="navbar-item">
-                  Live
-                </a>
-                <a onclick="reload();" target="_blank" href="https://www.worldcubeassociation.org/results/regions.php?regionId=Ireland&eventId=&years=&slim=Slim" class="navbar-item">
-                  WCA
-                </a>
-                <a onclick="reload();" target="_blank" href="https://wcadb.net/?region=Ireland&gender=female" class="navbar-item">
-                  Female Records
-                </a>
-              </div>
-            </div>
-            <a href="gallery.html" class="navbar-item">Gallery</a>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                Info
-              </a>
-              <div class="navbar-dropdown">
-                <a href="about.html" class="navbar-item">
-                  About Us
-                </a>
-                <a class="navbar-item" onclick="modalContact()">
-                  Contact
-                </a>
-                <a href="links.html" class="navbar-item">
-                  Links
-                </a>
-              </div>
+        <div class="navbar-end navbar-menu" id="navMenu">
+          <a class="navbar-item is-active" href="index.html">Home</a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Competitions</a>
+            <div class="navbar-dropdown is-hidden-touch">
+              <a class="navbar-item" href="upcoming.html">Upcoming</a> <a class="navbar-item" href="https://www.worldcubeassociation.org/competitions?utf8=%E2%9C%93&region=Ireland&search=&year=all+years&state=past&from_date=&to_date=&delegate=&display=list" onclick="reload();" target="_blank">Past</a> <a class="navbar-item" href="https://www.youtube.com/watch?v=dPL3eV-A0ww" onclick="reload();" target="_blank">Compeditor Tutorial</a>
             </div>
           </div>
-          <div class="navbar-end">
-            <div class="buttons">
-              <a target="_blank" href="https://www.facebook.com/groups/825531714235298/" class="button is-link is-rounded"><i class="fab fa-facebook-f"></i></a>
-              <a class="button is-link is-rounded is-inverted" onclick="modalSignup()"><p class="has-text-weight-bold ">Sign Up</p></a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Results</a>
+            <div class="navbar-dropdown is-hidden-touch">
+              <a class="navbar-item" href="live.html">Live</a> <a class="navbar-item" href="https://www.worldcubeassociation.org/results/regions.php?regionId=Ireland&eventId=&years=&slim=Slim" onclick="reload();" target="_blank">WCA</a> <a class="navbar-item" href="https://wcadb.net/?region=Ireland&gender=female" onclick="reload();" target="_blank">Female Records</a>
             </div>
-
+          </div><a class="navbar-item" href="gallery.html">Gallery</a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Info</a>
+            <div class="navbar-dropdown is-hidden-touch">
+              <a class="navbar-item" href="about.html">About Us</a> <a class="navbar-item" onclick="modalContact()">Contact</a> <a class="navbar-item" href="links.html">Links</a>
+            </div>
+          </div><a class="navbar-item is-link"  onclick="modalSignup()">
+          <p class="has-text-weight-bold has-text-link">Sign Up</p></a>
+          <p></p>
+          <div class="buttons menu-padded">
+            <a class="button is-link is-rounded" href="https://www.facebook.com/groups/825531714235298/" target="_blank"><i class="fab fa-facebook-f"></i></a>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
   <!-- Signup Popup -->
   <div class="modal" id="signupModal">
       <div class="modal-background" onclick="closeFunction()"></div>
