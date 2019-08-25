@@ -164,7 +164,7 @@ fetch(API_URL + '/images')
 
 function createImage(src, desc) {
   const box = document.createElement('div')
-  box.className = 'box card'
+  box.className = ' card'
   box.onclick = function() {
          modalGallery(src, desc);
      };
