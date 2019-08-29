@@ -16,6 +16,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <style>
+
+@include mobile {
+  .tabs ul {
+    flex-direction: column;
+
+    li {
+      width: 100%;
+    }
+  }
+}
       .home-hero {
 	       background: linear-gradient(
 	           rgba(41, 109, 219, 0.4),
