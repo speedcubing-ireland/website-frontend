@@ -1,6 +1,6 @@
 // Change this for each competition
 var compName = "Cubing in Cill Chainnigh 2019"
-const compCode = '4000'
+const compCode = '4619'
 // ===================================================================
 
 document.getElementById('comp-name').innerHTML = compName;
