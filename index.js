@@ -177,8 +177,8 @@ function createImage(src, desc) {
   p.innerText = desc
 
   const image = document.createElement('img')
-  image.data-src = src
-  image.className = 'is-smooth lazyload'
+  image.src = src
+  image.className = 'is-smooth'
 
   figure.appendChild(image)
   box.appendChild(figure)
