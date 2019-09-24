@@ -74,7 +74,7 @@ function createArticle({ title, author, date, contents, tagName }) {
   const header = document.createElement('div')
   header.className = 'message-header'
 
-  const titleElem = document.createElement('h2')
+  const titleElem = document.createElement('p')
   titleElem.innerText = title
   titleElem.className = 'has-text-black'
 
