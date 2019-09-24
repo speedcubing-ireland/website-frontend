@@ -179,6 +179,7 @@ function createImage(src, desc) {
   const image = document.createElement('img')
   image.src = src
   image.className = 'is-smooth'
+  image.alt = desc
 
   figure.appendChild(image)
   box.appendChild(figure)
@@ -200,6 +201,7 @@ function modalGallery(src, desc) {
   const image = document.createElement('img')
   image.src = src
   image.class = 'photo modal-image'
+  image.alt = desc
   figure.appendChild(image)
   modal.appendChild(figure)
 
