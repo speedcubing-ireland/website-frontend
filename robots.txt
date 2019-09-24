@@ -1,2 +1,3 @@
+Sitemap: http://speedcubingireland.com/sitemap.xml
 User-agent: *
 Disallow: /base.html
