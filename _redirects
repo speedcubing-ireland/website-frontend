@@ -5,3 +5,4 @@
 /links.html /links
 /posts.html /posts
 /upcoming.html /upcoming
+/get/articles https://speedcubing-backend.herokuapp.com/articles
