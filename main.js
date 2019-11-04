@@ -61,42 +61,42 @@ function closeFunction() {
   document.getElementById("signupModal").className += "modal";
 }
 
-document.getElementById("register_form").onsubmit = e => {
-  e.preventDefault();
-  submitFunction();
-  return false;
-};
+// document.getElementById("register_form").onsubmit = e => {
+//   e.preventDefault();
+//   submitFunction();
+//   return false;
+// };
 
-function submitFunction() {
-  $.ajax({
-    url: API_URL + "/emails",
-    data: JSON.stringify({ email: document.getElementById("address").value }),
-    dataType: "json",
-    contentType: "application/json",
-    type: "POST",
-    success() {
-      const btn = document.getElementById("submit-btn");
-      btn.innerText = "Success!";
-      btn.disabled = true;
+// function submitFunction() {
+//   $.ajax({
+//     url: API_URL + "/emails",
+//     data: JSON.stringify({ email: document.getElementById("address").value }),
+//     dataType: "json",
+//     contentType: "application/json",
+//     type: "POST",
+//     success() {
+//       const btn = document.getElementById("submit-btn");
+//       btn.innerText = "Success!";
+//       btn.disabled = true;
 
-      document.getElementById("address").disabled = true;
-      // elem.addEventListener("keypress", enterfunction);
-    }
-  });
-}
-// ============================================================
-function modalContact() {
-  document.getElementById("contactModal").className += " is-active";
-}
+//       document.getElementById("address").disabled = true;
+//       // elem.addEventListener("keypress", enterfunction);
+//     }
+//   });
+// }
+// // ============================================================
+// function modalContact() {
+//   document.getElementById("contactModal").className += " is-active";
+// }
 
-function closeContact() {
-  document.getElementById("contactModal").className += "modal";
-}
-document.getElementById("contact_form").onsubmit = e => {
-  e.preventDefault();
-  submitContact();
-  return false;
-};
+// function closeContact() {
+//   document.getElementById("contactModal").className += "modal";
+// }
+// document.getElementById("contact_form").onsubmit = e => {
+//   e.preventDefault();
+//   submitContact();
+//   return false;
+// };
 
 function submitContact() {
   $.ajax({
