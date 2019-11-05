@@ -45,13 +45,13 @@ function reload(){
   location.reload();
 }
 
-// const burger = document.querySelector(".burger");
-// const nav = document.querySelector(`#${burger.dataset.target}`);
+const burger = document.querySelector(".burger");
+const nav = document.querySelector(`#${burger.dataset.target}`);
 
-// burger.addEventListener("click", () => {
-//   burger.classList.toggle("is-active");
-//   nav.classList.toggle("is-active");
-// });
+burger.addEventListener("click", () => {
+  burger.classList.toggle("is-active");
+  nav.classList.toggle("is-active");
+});
 // ============================================================
 function modalSignup() {
   document.getElementById("signupModal").className += " is-active";
