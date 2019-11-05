@@ -92,11 +92,11 @@ function modalContact() {
 function closeContact() {
   document.getElementById("contactModal").className += "modal";
 }
-document.getElementById("contact_form").onsubmit = e => {
-  e.preventDefault();
-  submitContact();
-  return false;
-};
+// document.getElementById("contact_form").onsubmit = e => {
+//   e.preventDefault();
+//   submitContact();
+//   return false;
+// };
 
 // function submitContact() {
 //   $.ajax({
