@@ -38,12 +38,7 @@ document.querySelectorAll('.navbar-link').forEach(function(navbarLink){
 });
 
 
-$(function(){
-  $("#nav-placeholder").load("nav.html");
-});
-function reload(){
-  location.reload();
-}
+
 
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(`#${burger.dataset.target}`);
