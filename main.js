@@ -98,19 +98,19 @@ function closeFunction() {
 //   return false;
 // };
 
-function submitContact() {
-  $.ajax({
-    url: API_URL + "/contacts",
-    data: JSON.stringify({ email: document.getElementById("addresscont").value, name: document.getElementById("namecont").value, message: document.getElementById("messagecont").value }),
-    dataType: "json",
-    contentType: "application/json",
-    type: "POST",
-    success() {
-      const btn = document.getElementById("contact-btn");
-      btn.innerText = "Success!";
-      btn.disabled = true;
-      elem.addEventListener("keypress", enterfunction);
-    }
-  });
-}
+// function submitContact() {
+//   $.ajax({
+//     url: API_URL + "/contacts",
+//     data: JSON.stringify({ email: document.getElementById("addresscont").value, name: document.getElementById("namecont").value, message: document.getElementById("messagecont").value }),
+//     dataType: "json",
+//     contentType: "application/json",
+//     type: "POST",
+//     success() {
+//       const btn = document.getElementById("contact-btn");
+//       btn.innerText = "Success!";
+//       btn.disabled = true;
+//       elem.addEventListener("keypress", enterfunction);
+//     }
+//   });
+// }
 //  ============================================================
