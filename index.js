@@ -1,3 +1,8 @@
+function openInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+}
+
 const timeContainer = document.getElementById('time')
 fetch(API_URL + '/competitions')
   .then(res => res.json())

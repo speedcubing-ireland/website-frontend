@@ -82,6 +82,12 @@
 	   .time {
 	     text-align: center
 	   }
+	   .sponsorfont {
+		font-family: 'Source Sans Pro', sans-serif;
+		margin-top: 20px;
+		text-decoration: none;
+	   }
+
 	   .is-smooth {
 	     border-radius:2%;
 	    }
@@ -255,33 +261,44 @@
 			
 			<div class="column is-3 is-hidden-mobile" id="gallery">
 				<!-- Countdown -->
-				<div class="count container notification is-grey ">
-					<div class="time" id="time"></div>
-				</div>
-				<hr>
-				<div class="count container notification is-grey">
-					<div class="sponsor" id="sponsor">
-					<h1 class="title is-5 has-text-centered ">Our Sponsors</h1>
+				
+				<div class="count container notification is-grey" onclick="openInNewTab('http://fivepharma.com/');">
+					<div class="sponsor" id="sponsor" >
+					<h1 class="title is-5 has-text-centered ">Proudly Sponsored By</h1>
 					<a href="http://fivepharma.com/">
 						<figure class="image is-1-by-1">
-							<img src="assets/fivepharma.png">
-							</figure>
+						<img src="assets/fivepharma.png">
+						</figure>
 					</a>
+					<p class="sponsorfont has-text-centered" style="text-decoration: none">
+					<!-- <a href="http://fivepharma.com/" class="sponsorfont"> -->
+					Providing Quality Services Globally to the Pharmaceutical and Allied Sectors.
+					<!-- </a> -->
+					</p>
 					</div>
 				</div>
 		
 		<hr>
+		<div class="count container notification is-grey ">
+			<div class="time" id="time"></div>
+		</div>
+		<hr>
       </div>
       <div class="column is-9">
-		<div class="count container notification is-grey is-hidden-tablet">
-			<div class="sponsor" id="sponsor">
-				<p class="has-text-centered has-text-weight-bold is-size-4">Our Sponsors</p>
+		<div class="count container notification is-grey is-hidden-tablet" onclick="openInNewTab('http://fivepharma.com/');"	>
+			<div class="sponsor" id="sponsor" >
+				<h1 class="title is-5 has-text-centered ">Proudly Sponsored By</h1>
 				<a href="http://fivepharma.com/">
-				<figure class="image sponsorpad">
+					<figure class="image is-1-by-1 sponsorpad">
 					<img src="assets/fivepharma.png">
 					</figure>
-			</a>
-			</div>
+				</a>
+				<p class="sponsorfont has-text-centered" style="text-decoration: none">
+				<!-- <a href="http://fivepharma.com/" class="sponsorfont"> -->
+				Providing Quality Services Globally to the Pharmaceutical and Allied Sectors.
+				<!-- </a> -->
+				</p>
+				</div>
 		</div>
 		<hr>
 
